@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+</head>
+
+ 
+      <script>
+      
+
+    function func1() {
+    console.log("I'm in func1 ");
+    one = false;
+    return one;
+
+}
+function func2() {
+    
+    console.log("I'm in func2 ");
+    two = true;
+    return two;
+}
+
+function func3() {
+    
+    console.log("I'm in func3 ");
+    three = true
+    return three;
+
+}
+
+
+function main() {
+    
+    a = 30 
+    b = 40 
+    boolean = false 
+    
+    
+    console.log("1.Boolean operators provided")
+    console.log("----------------------------")
+    
+    
+    // In Javascript programming language &&(and), ||(or) and !(not) logical operators are provided.
+    // In Javascript programming language false and true keywords are reserved for boolean type.
+    // If the result of a boolean operator is true return value is true which is type bool else return value is false.
+  
+    // var a = 30, var b = 40, boolean = false.
+
+    // && : If both of the operands are true returns true else returns false.
+    boolean = (a < b) && (b == b)
+    console.log("(a < b) && (b == b) returns " + boolean + "\n")
+    //console.log(boolean,"\n")
+    
+    
+    // || : If both of the operands are false returns false else returns true.
+    boolean = (b > a) || (a > b)
+    console.log("(b > a) || (a > b) returns "+ boolean + "\n")
+   
+    
+    
+    // ! : Reverses the boolean value.
+    boolean = !((b > a) || (a > b))
+    console.log("!((b > a) || (a > b)) returns "+ boolean + "\n")
+
+
+
+    console.log("2.Data types for operands of boolean operators")
+    console.log("----------------------------------------------")
+    
+    //Different types can be used as operands but some of the results are not reasonable. 
+    // For ! operator, if the operand is 0, null, "", NaN, undefined or false it is accepted as false and anything other accepted as true.
+     
+   
+   
+    boolean = (a < b) && (b == b)
+    console.log("\n(a < b) && (b == b) returns "+ boolean + "\n")
+     
+    boolean = 5 && (b == b)
+    console.log("\n5 && (b == b) returns "+ boolean + "\n")
+     
+    boolean = null && (b == b)
+    console.log("\nnull && (b == b) returns "+ boolean + "\n")
+     
+    boolean = 'c' && (b == b)
+    console.log("\n'c' && (b == b) returns "+ boolean + "\n")
+    
+    boolean = 8 || (a > b)
+    console.log( "\n8 || (a > b) returns "+ boolean + "\n")
+     
+    boolean = (a > b) || 8 
+    console.log("\n(a > b) || 8 returns "+ boolean + "\n")
+   
+    boolean = !((b > a) || (a > b))
+    console.log("\n!((b > a) || (a > b)) returns "+ boolean + "\n")
+   
+    
+    
+    console.log("\n3.Operator precedence rules")
+    console.log("--------------------------")
+    
+    // not > and
+    boolean =  !false && true
+    console.log("!false && true returns "+ boolean + "\n")
+    
+    //Proof
+    boolean =  (!false) && true
+    console.log("(!false) && true returns "+ boolean + "\n")
+    
+    // not > and > or
+    boolean =  !true && false || true
+    console.log("!true && false || true returns "+ boolean + "\n")
+    
+    //Proof
+    boolean =  (!true && false) || true
+    console.log("(!true && false) || true returns "+ boolean + "\n")
+   
+   
+    
+    console.log("\n4.Operator associativity rules")
+    console.log("--------------------------")
+    
+    // In Jacascript programming langugage if the presendences of two operators are same the evaluation is done from left to right for && and || logical operators beacuse their associativty is left to right.
+    // ! logical operator's associativity is right to left.
+    
+   
+    boolean = func3() && func2() && func1()
+    console.log("\n")
+    
+    boolean = func2() && func3() && func1()
+    console.log("\n")
+    
+    boolean = func1() || func1() || func3();
+    console.log("\n")
+
+
+
+    
+    console.log("\n5.Operand evaluation order")
+    console.log("--------------------------")
+    
+    //According to the operator's associativity and precedence, operands are evaluated.
+    //In contrast function calls show that even with parentheses func2 was called first because it is decided at runtime. 
+    //But the evaluation is done according to rules.
+    
+   
+    boolean = func2() && (func1() || func3());
+    console.log("\n")
+    
+    boolean = func2() && (func1() && func3());
+    console.log("\n")
+
+
+    
+    console.log("\n6.Short-circuit evaluation")
+    console.log("--------------------------")
+    
+    // &&(AND) operator checks the left operand first and if its false it immediately returns and 
+    //the right operand is not evaluated
+    
+    console.log("func2() is never executed\n")
+    boolean = false && func2() 
+    console.log("\n")
+    console.log("--------------------------\n")
+    
+   console.log("func2() is executed\n")
+    boolean = true && func2()
+    console.log("\n")
+    console.log("--------------------------\n")
+    
+    
+    // ||(OR) operator checks the left operand first and if its true it immediately returns and 
+    //the right operand is not evaluated
+   
+    console.log("func2() is never executed\n")
+    boolean = true || func2()
+    console.log("\n")
+    console.log("--------------------------\n")
+     
+    console.log("func2() is executed\n")
+    boolean = false || func2()
+    console.log("\n")
+    console.log("--------------------------\n")
+   
+
+}  
+
+main()
+
+      
+    
+      </script>
+
+</html>
+
+
