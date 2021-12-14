@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+ 
+      <script>
+          
+          console.log("---------------------------------\n");
+          console.log("1. Iteration statements provided\n");
+          console.log("---------------------------------\n");
+        
+            // In Javascript programming language for, for in, for of, while and do while statements are provided
+        
+            // The for statement has three control expressions and executes the loop body until the second controlling expression evaluates to false.
+        
+            for (let i = 0; i < 4; i++){
+                console.log("For " + i);
+            }
+      
+            // The for in statemnts contiunes until all proporties of the object are proccessed.
+            let alphabet = { first : "A", second : "B",third : "C"};
+            for (i in alphabet){
+                console.log("For in " + alphabet[i] + "\n");
+            }
+            
+            // The for of statment contiunes until all items of an iterable are processed
+            let numbers = [10, 20,30,40,50];
+            for(const i of numbers) {
+               console.log("For of " + i);
+            }
+        
+           // The while statement checks the control expression before executing the loop body and executes the loop body until the control expression evaluates to false.
+            let a = 0;
+            while( a < 4) {
+           
+                console.log("While " + a);
+                a++;
+            }
+        
+            // The do statement checks the contol expression after executing the loop body each time and also executes the loop body at least once.
+            let b = 4;
+            do {
+                console.log("Do While " + b);
+                b++;
+            } while( b < 4);
+      
+        console.log("-----------------------------------------\n");
+        console.log("2. Data Structures Suitable for Iteration\n");
+        console.log("-----------------------------------------\n");
+        
+        //Iterate over an array
+        const arr = [5, 7, 9];
+        for (const i of arr) {
+            console.log(i);
+        }
+      
+        //Iterate over a string
+        const str = 'hey';
+        for (const i of str) {
+            console.log(i);
+        }
+      
+        //Iterate over a typed array
+        const typedArr = new Uint8Array([0x00, 0xff]);
+        for (const i of typedArr) {
+           console.log(i);
+         }
+      
+       //Iterate over a map
+       const map = new Map([['d', 1], ['n', 2], ['z', 3]]);
+       for (const i of map) {
+           console.log(i);
+       }
+      
+       //Iterate over a set
+       const st = new Set(['s', 'e', 't']);
+       for (const i of st) {
+          console.log(i);
+       }
+      
+       //Iterate over an argument object
+       (function() {
+         for (const i of arguments) {
+           console.log(i);
+         }
+       })(7, 11, 13);
+       
+       
+       //Iterate over a generator
+       function* generator(i) {
+         yield i;
+         yield i + 4;
+       }
+
+      const gen = generator(4);
+       for (const i of gen) {
+         console.log(i);
+        
+       }
+       
+       //Iterate over an object(enumerable)
+       let myalphabet = { first : "A", second : "B",third : "C"};
+       for (i in alphabet){
+           console.log("For in " + myalphabet[i] + "\n");
+       }
+       
+       console.log("------------------------------------\n");
+       console.log("3. The Way the Next Item is Accessed\n");
+       console.log("------------------------------------\n");
+       
+       //In Javascript there are no pointers
+       //Elements are acessed with indexing
+       const ar = [5, 7, 9];
+       for (const i of ar) {
+           console.log(i);
+       }
+
+       console.log(ar);
+      
+       
+          
+      </script>
+
+</html>
+
+
